@@ -99,7 +99,7 @@ GTKwave Analyzer v3.3.116 (w)1999-2000 BSI
 [0] start time
 [84999000] end time
 ```
-![GTKWave Simulation](https://github.com/<your-username>/<your-repo>/blob/main/Week2/BabySoC%20Fundamentals%20&%20Functional%20Modelling/Screenshot%202025-10-04%20154335.png?raw=true)
+![GTKWave Simulation](https://github.com/P-Venkata-Viswa-Sai/RTL-Workshop/blob/main/Week2/BabySoC%20Fundamentals%20%26%20Functional%20Modelling/Screenshot%202025-10-04%20154335.png)
 
 
 This is the gtkwave simulation of the RTL behavior of vsdbabysoc.
