@@ -42,8 +42,6 @@ It was designed to:
   - Phase Detector  
   - Loop Filter  
   - Voltage-Controlled Oscillator (VCO)  
-- **Why not off-chip clocks?**
-  - Delays, jitter, frequency mismatches, crystal drift.  
 
 ### 3. DAC (Digital-to-Analog Converter)  
 - Converts binary → analog signals.  
@@ -55,4 +53,35 @@ It was designed to:
   - Enables multimedia outputs (sound, video).  
 
 ---
+# BabySoC Project
+So, in this project here it contains different modules such as
+- vsdbabysoc.v(Top-Level SoC Module)
+- rvmyth.v (RISC-V Core)
+- avsdpll.v (PLL Module)
+- avsddac.v (DAC Module)
+
+This project demonstrates integration of these IP cores and aims to simulate and verify the design behavior using pre-synthesis and post-synthesis simulations.
+This work discusses the different aspects of designing a small SoC based on RVMYTH (a RISCV-based processor). This SoC will leverage a PLL as its clock generator and controller and a 10-bit DAC as a way to talk to the outside world. Other electrical devices with proper analog input like televisions, and mobile phones could manipulate DAC output and provide users with music sound or video frames. 
+
+---
+## About synthesis
+Before going into that, let us know  What “Synthesis” Means
+In digital design, synthesis is the process of converting RTL code (behavioral Verilog) into a gate-level netlist built from real logic cells — like NANDs, NORs, flip-flops — from a standard cell library (like Sky130).
+It includes two parts Pre synthesis and post synthesis.
+### Pre Synthesis
+Here we are directly checking the logic of the written code without involving any real actual gates.
+We are doing it so that we can check the logical and functional correctness of it before actual implementation on hardware so that they will be fast respnse of correct or wring and gives us no damage in hardware if somthing is really wrong.
+### Post synthesis
+It is the actual implementation of our code onto the thousands of real gates.
+This we do because we can check whether the logic doesnt change we are implementing on actual circuits and ensure that we are getting no time delays in it or any race conditions.
+---
+## vsdbabysoc.v (Top-Level SoC Module)
+This is the top level module which integrates the other three modules.
+Before going into that let us know  What “Synthesis” Means
+In digital design, synthesis is the process of converting RTL code (behavioral Verilog) into a gate-level netlist built from real logic cells — like NANDs, NORs, flip-flops — from a standard cell library (like Sky130).
+
+### Presynthesis Modelling
+It includes verifying the RTL code behaviour before synthesizing it into software. It checks the functional correctness of logic using test benches rather than directly implementing onto gates.
+
+
  
