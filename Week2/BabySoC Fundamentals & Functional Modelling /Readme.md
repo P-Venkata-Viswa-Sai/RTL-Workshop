@@ -35,17 +35,57 @@ BabySoc is like a model for SoC where we can easily experiment and understand ho
 
 ---
 
-## Role of Functional Modelling  
-Functional modelling is done **before RTL and physical design** to ensure the SoC works logically.  
--  Verifies CPU–memory–peripheral interactions.  
--  Detects design flaws early.  
--  Runs faster than detailed RTL simulations.  
--  Serves as a **blueprint** for RTL coding.  
+##  Why BabySoC is a Simplified Model for Learning SoC Concepts
 
+The **BabySoC** is designed as a **minimal and educational version of a full System-on-Chip (SoC)**.  
+It includes only the *core functional elements* needed to demonstrate how an SoC works, without the complexity of commercial chips.
+
+- **Essential Components Only:**  
+  Contains just three main IP blocks — the **RVMYTH RISC-V CPU**, **Phase-Locked Loop (PLL)**, and **Digital-to-Analog Converter (DAC)**.  
+  This makes it lightweight and easy to simulate.
+
+- **Focus on Conceptual Learning:**  
+  Allows learners to understand how the **CPU, clock system, and peripherals** communicate and synchronize.
+
+- **Simplified Interconnect:**  
+  No complex bus architectures or multi-core communication — just direct, understandable connections.
+
+- **Fast Simulation & Debugging:**  
+  Smaller design = quicker simulations in **Icarus Verilog** and easier waveform visualization in **GTKWave**.
+
+- **Open-Source & Accessible:**  
+  Built using open-source IPs (RVMYTH, PLL, DAC) → anyone can experiment, modify, and learn.
+
+ **In short**  
+BabySoC removes unnecessary industrial complexity while preserving the key principles of SoC design — making it an ideal learning model for students and beginners in VLSI and embedded systems.
 
 ---
 
-## Conclusion  
-BabySoC helps learners **grasp SoC fundamentals** in a simplified way.  
-Functional modelling ensures correctness and reduces risk before moving to RTL and physical design.  
-It is the **first step in the SoC design journey**. 
+##  The Role of Functional Modelling Before RTL and Physical Design
+
+**Functional modelling** is the first step in the SoC design flow.  
+It defines **how the system should behave logically**, before worrying about transistor-level or gate-level implementation.
+
+###  Purpose of Functional Modelling
+- To **verify the SoC architecture** and ensure all components (CPU, memory, peripherals) communicate correctly.
+- To **test functionality early**, before time-consuming RTL and physical design stages.
+- To **identify design flaws quickly** and correct them with minimal cost.
+
+###  How It Fits in the Design Flow
+1. **Functional Modelling (Behavioral Level)**  
+   - Implemented in high-level Verilog (behavioral constructs).  
+   - Checks *logical correctness* and *data flow*.
+
+2. **RTL Design (Register-Transfer Level)**  
+   - Defines actual registers, signals, and hardware structure.  
+   - Focuses on clock cycles and hardware timing.
+
+3. **Physical Design (Layout Level)**  
+   - Converts RTL into transistor placement, routing, and fabrication-ready layout.
+
+###  Key Benefits
+- Faster simulation compared to RTL.  
+- Easier debugging and architectural experimentation.  
+- Reduces risk of functional errors before synthesis and layout.
+---
+
