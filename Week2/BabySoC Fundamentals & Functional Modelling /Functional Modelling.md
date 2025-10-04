@@ -132,8 +132,9 @@ GTKwave Analyzer v3.3.116 (w)1999-2000 BSI
 [0] start time
 [84999000] end time
 ```
-<img src="../images_w2/post_synth_sim_vsdbabysoc.png" alt="Diagram" width="850px" />
- 
+![GTKWave Simulation](https://github.com/P-Venkata-Viswa-Sai/RTL-Workshop/blob/main/Week2/BabySoC%20Fundamentals%20%26%20Functional%20Modelling/Screenshot%202025-10-04%20192300.png
+ )
+
 **Explanation:**
 
 In the post-synthesis simulation, the clock from the PLL drives the RVMYTH core, while reset makes sure the design starts in a known state. Once running, the core pushes out 10-bit data from register #17 on its OUT[9:0] bus. This data goes into the DAC, which then produces two forms of output in the simulation: a digital OUT (just for representation) and a real OUT that shows the actual analog behavior. This flow confirms that, even after synthesis, the signals move correctly from the core to the DAC and finally into an analog waveform.
