@@ -72,8 +72,10 @@ It includes two parts Pre synthesis and post synthesis.
 Here we are directly checking the logic of the written code without involving any real actual gates.
 We are doing it so that we can check the logical and functional correctness of it before actual implementation on hardware so that they will be fast respnse of correct or wring and gives us no damage in hardware if somthing is really wrong.
 ### Post synthesis
+
 It is the actual implementation of our code onto the thousands of real gates.
 This we do because we can check whether the logic doesnt change we are implementing on actual circuits and ensure that we are getting no time delays in it or any race conditions.
+
 ---
 ## vsdbabysoc.v (Top-Level SoC Module)
 This is the top level module which integrates the other three modules.
